@@ -8,6 +8,7 @@ public class ClothWater : MonoBehaviour
 		if(collision.gameObject.CompareTag("ObjectGrab")){
 			Debug.Log("Cloth is wet!");
 			//change objectgrab color to blue
+			collision.gameObject.GetComponent<Renderer>().material.SetColor("Cloth",Color.blue);
 			//change objectgrab tag or update variable
 		}
 		
