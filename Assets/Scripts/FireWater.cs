@@ -9,7 +9,7 @@ public class FireWater : MonoBehaviour
 	private void OnTriggerEnter(Collider collision) {
 		if(collision.gameObject.CompareTag("ObjectGrab")){
 			Debug.Log("Fire extinguished!");
-			Destroy(GameObject.FindWithTag("ObjectFire"));
+			Destroy(this.gameObject);
 		}
 		
 		
