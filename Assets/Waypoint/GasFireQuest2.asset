@@ -10,5 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e3018f32c7a69f4c8f8bf392573a9a8, type: 3}
-  m_Name: NewWaypointData
+  m_Name: GasFireQuest2
   m_EditorClassIdentifier: 
+  WaypointDetails: '- Basahi handuk'
+  SpawnPosition: {x: 4, y: 0.641, z: 11}
+  nextWaypoint: {fileID: 0}
