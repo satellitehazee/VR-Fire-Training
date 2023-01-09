@@ -7,12 +7,23 @@ public class HandPresencePhysics : MonoBehaviour
     public Transform target;
     private Rigidbody rb;
     private Collider[] handColliders;
+    public GameObject activeGameObject;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         handColliders = GetComponentsInChildren<Collider>();
+    }
+
+    public void ActivateObject()
+    {
+        activeGameObject.SetActive(true);
+    }
+
+    public void DisableObject()
+    {
+        activeGameObject.SetActive(false);
     }
 
     public void EnableHandCollider()
