@@ -6,14 +6,14 @@ public class HandPresencePhysics : MonoBehaviour
 {
     public Transform target;
     private Rigidbody rb;
-    private Collider[] handColliders;
+    // private Collider[] handColliders;
     public GameObject activeGameObject;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        handColliders = GetComponentsInChildren<Collider>();
+        // handColliders = GetComponentsInChildren<Collider>();
     }
 
     public void ActivateObject()
@@ -26,26 +26,26 @@ public class HandPresencePhysics : MonoBehaviour
         activeGameObject.SetActive(false);
     }
 
-    public void EnableHandCollider()
-    {
-        foreach (var item in handColliders)
-        {
-            item.enabled = true;
-        }
-    }
+    // public void EnableHandCollider()
+    // {
+    //     foreach (var item in handColliders)
+    //     {
+    //         item.enabled = true;
+    //     }
+    // }
 
-    public void EnableHandColliderDelay(float delay)
-    {
-        Invoke("EnableHandCollider", delay);
-    }
+    // public void EnableHandColliderDelay(float delay)
+    // {
+    //     Invoke("EnableHandCollider", delay);
+    // }
 
-    public void DisableHandCollider()
-    {
-        foreach (var item in handColliders)
-        {
-            item.enabled = false;
-        }
-    }
+    // public void DisableHandCollider()
+    // {
+    //     foreach (var item in handColliders)
+    //     {
+    //         item.enabled = false;
+    //     }
+    // }
 
     // Update is called once per frame
     void FixedUpdate()
