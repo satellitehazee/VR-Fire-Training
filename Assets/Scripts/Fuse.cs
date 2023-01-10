@@ -4,16 +4,29 @@ using UnityEngine;
 
 public class Fuse : MonoBehaviour
 {
-    public bool isFuseOff = false;
     
-    void Start()
-    {
-        isFuseOff = false;
+    [SerializeField]
+    private GameObject indicatorLight;
+    [SerializeField]
+    private Material indicatorOff;
+    private Material indicatorOn;
+    public bool isFuseOff = false;
+    private void Start() {
+        indicatorOn = indicatorLight.GetComponent<MeshRenderer>().material;
     }
 
-    public void TurnOffFuse()
+    public void ToggleFuse()
     {
-        Debug.Log("Fuse is off!");
-        isFuseOff = true;
+        if(isFuseOff == false){
+            Debug.Log("Fuse is off!");
+            indicatorLight.GetComponent<MeshRenderer>().material = indicatorOff;
+            isFuseOff = true;
+        }
+        else{
+            Debug.Log("Fuse is on");
+            indicatorLight.GetComponent<MeshRenderer>().material = indicatorOn;
+            isFuseOff = false;
+        }
     }
+    
 }
