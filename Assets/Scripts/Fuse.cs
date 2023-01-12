@@ -11,21 +11,27 @@ public class Fuse : MonoBehaviour
     private Material indicatorOff;
     private Material indicatorOn;
     public bool isFuseOff = false;
-    private void Start() {
+    private void Start()
+    {
         indicatorOn = indicatorLight.GetComponent<MeshRenderer>().material;
     }
 
     public void ToggleFuse()
     {
-        if(isFuseOff == false){
+        switch (isFuseOff)
+        {
+            case false:
             Debug.Log("Fuse is off!");
             indicatorLight.GetComponent<MeshRenderer>().material = indicatorOff;
             isFuseOff = true;
-        }
-        else{
+            break;
+            
+            case true:
             Debug.Log("Fuse is on");
             indicatorLight.GetComponent<MeshRenderer>().material = indicatorOn;
             isFuseOff = false;
+            break;
+
         }
     }
     
