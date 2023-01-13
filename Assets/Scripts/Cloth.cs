@@ -22,7 +22,7 @@ public class Cloth : MonoBehaviour
 			Destroy(other.gameObject);
 		}
 
-        if(other.gameObject.name == "FireElectrical" && MyFuse.isFuseOff == true && isWet == true) {
+        if(other.gameObject.name == "Fire Electrical" && MyFuse.isFuseOff == true && isWet == true) {
             Debug.Log("Fire extinguished! (Electrical)");
             Destroy(other.gameObject);
         }
