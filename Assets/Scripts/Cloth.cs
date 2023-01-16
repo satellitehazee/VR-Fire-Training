@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cloth : MonoBehaviour
+public class Cloth : Fuse
 {
     [SerializeField]
     private Material wetMaterial;
@@ -17,12 +17,12 @@ public class Cloth : MonoBehaviour
             //change objectgrab tag or update variable
         }
 
-        if(other.gameObject.name == "Fire" && isWet == true){
+        if(other.gameObject.name == "Fire" && isWet == true && isRegulatorOff){
 			Debug.Log("Fire extinguished!");
 			Destroy(other.gameObject);
 		}
 
-        if(other.gameObject.name == "Fire Electrical" && MyFuse.isFuseOff == true && isWet == true) {
+        if(other.gameObject.name == "Fire Electrical" && isFuseOff == true && isWet == true) {
             Debug.Log("Fire extinguished! (Electrical)");
             Destroy(other.gameObject);
         }
