@@ -11,6 +11,7 @@ public class Fuse : MonoBehaviour
     private Material indicatorOff;
     private Material indicatorOn;
     public bool isFuseOff = false;
+    public bool isRegulatorOff = false;
     private void Start()
     {
         indicatorOn = indicatorLight.GetComponent<MeshRenderer>().material;
@@ -33,6 +34,10 @@ public class Fuse : MonoBehaviour
             break;
 
         }
+    }
+    public void TurnOffRegulator()
+    {
+        isRegulatorOff = true;
     }
     
 }
