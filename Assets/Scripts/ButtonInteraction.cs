@@ -9,6 +9,7 @@ public class ButtonInteraction : MonoBehaviour
     private void Start(){
         Button _startButton = null;
         Button _aboutButton = null;
+        Button _tutorialButton = null;
         Button _quitButton = null;
         GameObject MainMenu = this.gameObject; // the script is placed on the main menu object
         GameObject AboutMenu = this.transform.parent.GetChild(1).gameObject;
@@ -25,6 +26,7 @@ public class ButtonInteraction : MonoBehaviour
             MainMenu.SetActive(false);
             AboutMenu.SetActive(true);
             });
+        _tutorialButton.onClick.AddListener(() => SceneManager.LoadScene(2));
         _quitButton.onClick.AddListener(() => Application.Quit());
         _aboutBack.onClick.AddListener(() => {
             AboutMenu.SetActive(false);
