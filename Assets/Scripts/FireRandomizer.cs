@@ -9,6 +9,8 @@ public class FireRandomizer : MonoBehaviour
 	private Vector3[] fireGasPositions;
 	[SerializeField]
 	private Vector3[] fireElectricalPositions;
+	private float timer = 10.0f;
+	Transform[] allchild;
 
 	public bool FireElectrical;
 	
@@ -20,7 +22,7 @@ public class FireRandomizer : MonoBehaviour
 		this.transform.position = fireElectricalPositions[Random.Range(min,max)];
 	}
 	private void Start() {
-		
+		allchild = this.transform.GetChild(0).GetComponentsInChildren<Transform>();
 		if(Random.value >= 0.5) FireElectrical = true;
 		else FireElectrical = false;
 
@@ -35,6 +37,16 @@ public class FireRandomizer : MonoBehaviour
 				this.transform.tag = "ObjectFire";
 				RandomizeGasPosition(0, fireGasPositions.Length);
 				break;
+		}
+	}
+	private void Update() {
+		timer -= Time.deltaTime;
+		Debug.Log(Mathf.Round(timer));
+		if(timer <= 0){
+			for(int i = 0; i < allchild.Length; i++){
+				allchild[i].transform.localScale += new Vector3(1f,1f,1f);
+			}
+			timer = 10.0f;
 		}
 	}
 }
