@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cloth : MonoBehaviour
+public class TutorialCloth : MonoBehaviour
 {
     [SerializeField]
     private Material wetMaterial;
@@ -14,7 +14,7 @@ public class Cloth : MonoBehaviour
     private bool isWet = false;
     public Fuse MyFuse;
     public Gas MyGas;
-    public FireRandomizer Fire;
+
     private void OnTriggerEnter(Collider other){
         if(other.gameObject.CompareTag("ObjectWater")){
             Debug.Log("Cloth is wet!");
@@ -25,11 +25,10 @@ public class Cloth : MonoBehaviour
         }
 
         if(other.gameObject.CompareTag("ObjectFire")){
-            if(isWet == true && MyGas.isRegulatorOff == true && Fire.isExtinguishable == true)
+            if(isWet == true && MyGas.isRegulatorOff == true)
             {
                 Debug.Log("Fire extinguished!");
                 Destroy(other.gameObject);
-                Fire.isClear = true;
             }
 			else
             {
@@ -37,13 +36,11 @@ public class Cloth : MonoBehaviour
             }
 		} 
 
-
         if(other.gameObject.CompareTag("ObjectFireElectrical")) {
-            if(isWet == true && MyFuse.isFuseOff == true && Fire.isExtinguishable == true)
+            if(isWet == true && MyFuse.isFuseOff == true)
             {
                 Debug.Log("Fire extinguished! (Electrical)");
                 Destroy(other.gameObject);
-                Fire.isClear = true;
             }
             else
             {

@@ -18,7 +18,8 @@ public class ButtonInteraction : MonoBehaviour
         for(int i = 0; i< menuButtons.Length; i++)
         {
             if(menuButtons[i].name == "ButtonStart") _startButton = menuButtons[i];
-            if(menuButtons[i].name == "ButtonAbout") _aboutButton = menuButtons[i];
+            if (menuButtons[i].name == "ButtonTutorial") _tutorialButton = menuButtons[i];
+            if (menuButtons[i].name == "ButtonAbout") _aboutButton = menuButtons[i];
             if(menuButtons[i].name == "ButtonQuit") _quitButton = menuButtons[i];
         }
         _startButton.onClick.AddListener(() => SceneManager.LoadScene(1));
