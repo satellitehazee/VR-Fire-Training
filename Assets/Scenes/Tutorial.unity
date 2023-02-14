@@ -519,10 +519,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 246892258}
   - {fileID: 1711604760}
   - {fileID: 1183209794}
   m_Father: {fileID: 1981681344}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &57943089
 MonoBehaviour:
@@ -730,7 +731,7 @@ MonoBehaviour:
   m_HapticHoverCancelDuration: 0
   m_LineType: 0
   m_BlendVisualLinePoints: 1
-  m_MaxRaycastDistance: 0.3
+  m_MaxRaycastDistance: 0.5
   m_RayOriginTransform: {fileID: 1183209794}
   m_ReferenceFrame: {fileID: 0}
   m_Velocity: 16
@@ -1999,7 +2000,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3621981467535291324, guid: 6c2509c76b281144cb0099fc45f17a09, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3621981467535291324, guid: 6c2509c76b281144cb0099fc45f17a09, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2478,13 +2479,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246892254}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 0.95, z: 0}
+  m_LocalPosition: {x: 0.05000019, y: 0.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2037728502}
-  m_Father: {fileID: 1981681344}
-  m_RootOrder: 2
+  m_Father: {fileID: 57943088}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &272860148
 GameObject:
@@ -3659,7 +3660,10 @@ MonoBehaviour:
 
     Joystick kiri: movement
 
-    Joystick kanan: rotate camera'
+    Joystick kanan: rotate camera
+
+    Grip
+    kiri/kanan: ambil benda'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3901,7 +3905,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1748621726}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -6, y: 80, z: 0}
 --- !u!1 &497579826
 GameObject:
@@ -6972,7 +6976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6028541643303651687, guid: 7eb8f0ed299d70f429df582be35b81e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.55194324
+      value: 0.334
       objectReference: {fileID: 0}
     - target: {fileID: 6028541643303651687, guid: 7eb8f0ed299d70f429df582be35b81e5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7383,7 +7387,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 57943088}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 6, y: -80, z: 0}
 --- !u!1 &1212919052
 GameObject:
@@ -7868,14 +7872,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255071209}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 0.95, z: 0}
+  m_LocalPosition: {x: -0.05000019, y: 0.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 993068532}
   - {fileID: 1825598118}
-  m_Father: {fileID: 1981681344}
-  m_RootOrder: 1
+  m_Father: {fileID: 1748621726}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1287721013
 GameObject:
@@ -9912,7 +9916,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3621981467535291324, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3621981467535291324, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10392,10 +10396,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1255071213}
   - {fileID: 186949714}
   - {fileID: 469878542}
   m_Father: {fileID: 1981681344}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1748621727
 MonoBehaviour:
@@ -10603,7 +10608,7 @@ MonoBehaviour:
   m_HapticHoverCancelDuration: 0
   m_LineType: 0
   m_BlendVisualLinePoints: 1
-  m_MaxRaycastDistance: 0.3
+  m_MaxRaycastDistance: 0.5
   m_RayOriginTransform: {fileID: 469878542}
   m_ReferenceFrame: {fileID: 0}
   m_Velocity: 16
@@ -12725,8 +12730,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1250141079}
-  - {fileID: 1255071213}
-  - {fileID: 246892258}
   - {fileID: 1748621726}
   - {fileID: 57943088}
   m_Father: {fileID: 1473926808}
